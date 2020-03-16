@@ -1,0 +1,63 @@
+
+/*
+ COLORS:
+
+ Light green: #7ed56f
+ Medium green: #55c57a
+ Dark green: #28b485
+
+ */
+
+/*
+ COLORS:
+
+ Light blue:  #CCD9E8
+ Medium blue: #315D94
+ Dark blue:   #073C7E
+
+ Light blue:  #F2F5F9
+ Medium blue: #7896BA
+ Dark blue:   #093E7F
+
+ */
+
+* {
+    margin:         0px;
+    padding:        0px;
+    box-sizing:     border-box;
+}
+
+body {
+    font-family:    "Lato", sans-serif, Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:    400;
+    font-size:      16px;
+    line-height:    1.7;
+    color:          #3F3F40;
+    padding: 30px;
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right, rgba( 204, 217, 232, 0.8 ),
+                                           rgba( 9, 62, 127, 0.8 )  ),
+    url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.logo-box{
+
+
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo{
+
+    height: 60px;
+
+}
