@@ -33,68 +33,97 @@ body {
     font-size:      16px;
     line-height:    1.7;
     color:          #3F3F40;
-    padding: 30px;
+    padding:        30px;
 }
 
 .header {
-    height: 95vh;
-    background-image: linear-gradient(
-     to right bottom,
-     rgba( 204, 217, 232, 0.8 ),
-     rgba( 9, 62, 127, 0.8 )  ),
-    url(../img/hero.jpg);
-    background-size: cover;
-    background-position: top;
-    position: relative;
-
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    height:                 95vh;
+    background-image:       linear-gradient(
+                                                 to right bottom,
+                                                 rgba( 204, 217, 232, 0.8 ),
+                                                 rgba( 9, 62, 127, 0.8 )  ),
+                                                url(../img/hero2.jpg);
+    background-size:        cover;
+    background-position:    top;
+    position:               relative;
+    clip-path:              polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
-.logo-box{
-
-
-    position: absolute;
-    top: 40px;
-    left: 40px;
+.logo-box {
+    position:       absolute;
+    top:            40px;
+    left:           40px;
 }
 
-.logo{
-
-    height: 60px;
-
+.logo {
+    height:     60px;
 }
 
-.text-box{
-
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50% );
-    
-
-
-
+.text-box {
+    position:       absolute;
+    top:            40%;
+    left:           50%;
+    transform:      translate(-50%, -50% );
 }
 
-
-.heading-primary{
-color: white;
-text-transform: uppercase;
-text-align: center;
-
+.heading-primary {
+    color:              white;
+    text-transform:     uppercase;
+    text-align:         center;
+    backface-visibility: hidden;
 }
 
-.heading-primary-main{
-display: block;
-font-size: 60px;
-font-weight: 400px;
-letter-spacing: 35px;
+.heading-primary-main {
+    display:                        block;
+    font-size:                      60px;
+    font-weight:                    400px;
+    letter-spacing:                 35px;
+    animation-name:                 MoveTLeft;
+    animation-duration:             2s;
+    animation-timing-function:      ease-out;
+
+    /* animation-delay: 2s;   /*  Define el tiempo en que la animacion empieza a funcionar */
+    /* animation-iteration-count: infinite; Define cuantas veces se ejecuta la animación */
+   
 }
 
-.heading-primary-sub{
-display: block;
-font-size: 20px;
-font-weight: 400px;
-letter-spacing: 15px;
+.heading-primary-sub {
+    display:            block;
+    font-size:          20px;
+    font-weight:        400px;
+    letter-spacing:     15px;
+    animation-name:     MoveTRight;
+    animation:          MoveTRight 2s ease-out;
+}
 
+@keyframes MoveTLeft {
+    0% {
+        opacity:        0;
+
+        /* Hacer que la animacihaga un fade, iniciando invisble */
+        transform:      translateX(-100%);
+    }
+    80% {
+        transform:      translateX(10px);
+    }
+    100% {
+        opacity:        1;
+        transform:      translateX(0%);
+    }
+}
+
+@keyframes MoveTRight {
+    0% {
+        opacity:        0;
+
+        /* Hacer que la animacihaga un fade, iniciando invisble */
+        transform:      translateX(100%);
+    }
+    80% {
+        transform:      translateX(-10px);
+    }
+    100% {
+        opacity:        1;
+        transform:      translateX(0%);
+    }
 }
