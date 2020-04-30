@@ -15,7 +15,8 @@
  Dark blue:   #073C7E
 
 
- 
+
+
 
  */
 *,
@@ -44,46 +45,41 @@ body {
   background-position: top;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 6rem; }
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 6rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 .heading-primary {
-  color: white;
+  color: #FFFF;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin: 6rem; }
-
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: MoveTLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  /* animation-delay: 2s;   /*  Define el tiempo en que la animacion empieza a funcionar */
-  /* animation-iteration-count: infinite; Define cuantas veces se ejecuta la animación */ }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.5rem;
-  animation-name: MoveTRight;
-  animation: MoveTRight 1s ease-out; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: MoveTLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* animation-delay: 2s;   /*  Define el tiempo en que la animacion empieza a funcionar */
+    /* animation-iteration-count: infinite; Define cuantas veces se ejecuta la animación */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+    animation-name: MoveTRight;
+    animation: MoveTRight 1s ease-out; }
 
 @keyframes MoveTLeft {
   0% {
@@ -116,8 +112,7 @@ body {
     opacity: 1;
     transform: translateY(0); } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -130,14 +125,19 @@ body {
 .btn:hover {
   transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-0.2rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn--white {
-  background-color: #FFF;
-  color: #777; }
+  background-color: #FFFF;
+  color: #3F3F40; }
+  .btn--white::after {
+    background-color: #FFFF; }
 
 .btn::after {
   content: "";
@@ -150,13 +150,6 @@ body {
   left: 0;
   z-index: -1;
   transition: all .4s; }
-
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
 
 .btn--animated {
   animation: MoveBottomUP .5s ease-out .75s;
