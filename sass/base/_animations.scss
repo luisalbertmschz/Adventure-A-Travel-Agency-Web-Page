@@ -1,0 +1,51 @@
+@keyframes MoveTLeft {
+    0% {
+        opacity: 0;
+
+        /* Hacer que la animacion haga un fade, iniciando invisble */
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes MoveTRight {
+    0% {
+        opacity: 0;
+
+        /* Hacer que la animacion haga un fade, iniciando invisble */
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes MoveBottomUP {
+    0% {
+        opacity: 0;
+
+        /* Hacer que la animacion haga un fade, iniciando invisble */
+        transform: translateY(3rem);
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
